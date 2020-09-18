@@ -1,0 +1,19 @@
+<h1>{{ title }}</h1>
+
+<ul>
+  <li
+    *ngFor="
+      let item of navigationList;
+      let i = index;
+      let oddElement = odd;
+      let firstElement = first
+    "
+  >
+    <a href="{{ item.url }}" class="{{ oddElement ? 'odd' : 'even' }}"
+      >{{ i + 1 }} {{ item.name }}</a
+    >
+  </li>
+</ul>
+{{ 3 + 3 }}
+<a href="login.html" *ngIf="userNotLoggedIn">login</a>
+<p>{{ "9 / 15 / 2020" | date: "full" }}</p>

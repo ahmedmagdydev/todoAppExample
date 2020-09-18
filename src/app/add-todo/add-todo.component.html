@@ -1,0 +1,16 @@
+<div class="add-items d-flex">
+  <input
+    type="text"
+    class="form-control todo-list-input"
+    [ngClass]="{ 'is-invalid': hasError }"
+    placeholder="What do you need to do today?"
+    #newTodo
+  />
+  <button
+    (click)="addTodo(newTodo.value)"
+    class="add btn btn-primary font-weight-bold todo-list-add-btn"
+  >
+    Add
+  </button>
+</div>
+<p class="small text-danger" *ngIf="hasError">todo name shouldn't be empty</p>
